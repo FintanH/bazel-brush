@@ -10,6 +10,7 @@ load(
 )
 
 exports_files([
+    "extra_packages.bzl",
     "packages.bzl",
 ])
 
