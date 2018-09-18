@@ -90,8 +90,16 @@ load(
 hazel_repositories(
   core_packages = core_packages,
   packages = packages,
+  exclude_packages = [
+    "ghc-paths",
+  ],
   extra_libs = {
         "stdc++": "@gcc-unwrapped.lib//:patched_cpp",
         "c++": "@gcc-unwrapped.lib//:patched_cpp",
     },
+)
+
+hazel_custom_package_hackage(
+    package_name = "ghc-paths",
+    version = "0.1.0.9",
 )
